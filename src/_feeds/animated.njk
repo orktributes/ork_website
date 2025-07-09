@@ -1,0 +1,45 @@
+---json
+{
+  "permalink": "animated.xml",
+  "eleventyExcludeFromCollections": true,
+  "metadata": {
+    "title": "Animated Porn",
+    "subtitle": "A collection of my Animated Porn",
+    "url": "http://127.0.0.1:8080",
+    "feedUrl": "http://127.0.0.1/animated.xml",
+    "author": {
+      "name": "ork",
+      "email": ""
+    }
+  }
+}
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="{{ metadata.url }}">
+  <channel>
+    <title>{{ metadata.title }}</title>
+    <link>{{ metadata.url }}</link>
+    <description>{{ metadata.subtitle }}</description>
+    <language>en</language>
+    {%- for post in collections[ 'animatedposts' ] | reverse %}
+        {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
+        <item>
+            <title>{{ post.data.title }}</title>
+            <link>{{ absolutePostUrl }}</link>
+            <description>
+              {%- for items in post.data.Performers %}
+                <text>{{items.name}}&lt;br&gt;</text>
+                <Image>
+                  <![CDATA[<img src="{{metadata.url}}{{items.img}}" width="80" height="80">]]>
+                </Image>&lt;br&gt;
+                <link>{{items.social}}</link>&lt;br&gt;
+              {%- endfor %}
+              {{post.content}}
+            </description>
+            <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
+            <dc:creator>{{ metadata.author.name }}</dc:creator>
+            <guid>{{ absolutePostUrl }}</guid>
+        </item>
+    {%- endfor %}
+  </channel>
+</rss>

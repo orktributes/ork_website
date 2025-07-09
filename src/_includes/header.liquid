@@ -1,0 +1,14 @@
+<div class="header">
+    <header>
+    <a class="nav" href="/">Home</a>
+    {% if title == "Home" %}
+    {% elsif title == "Non Animated" %}
+    {% elsif title == "Animated" %}
+    {% else %}
+        <a class="nav" href="{{link}}">Link To The Scene</a>
+    {% endif %}
+    <a class="nav" href="/posts/animated/">Animated</a>
+    <a class="nav" href="/posts/non_animated/">Non Animated</a>
+    <hr>
+</header>
+</div>

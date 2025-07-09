@@ -1,0 +1,36 @@
+---json
+{
+  "permalink": "nonanimated.xml",
+  "eleventyExcludeFromCollections": true,
+  "metadata": {
+    "title": "Non Animated Porn",
+    "subtitle": "A collection of my Non Animated Porn",
+    "url": "https://127.0.0.1:8080/",
+    "feedUrl": "https://127.0.0.1/nonanimated.xml",
+    "author": {
+      "name": "ork",
+      "email": ""
+    }
+  }
+}
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="{{ metadata.url }}">
+  <channel>
+    <title>{{ metadata.title }}</title>
+    <link>{{ metadata.url }}</link>
+    <description>{{ metadata.subtitle }}</description>
+    <language>en</language>
+    {%- for post in collections[ 'nonanimatedposts' ] | reverse %}
+        {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
+        <item>
+            <title>{{ post.data.title }}</title>
+            <link>{{ absolutePostUrl }}</link>
+            <description>{{content}}</description>
+            <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
+            <dc:creator>{{ metadata.author.name }}</dc:creator>
+            <guid>{{ absolutePostUrl }}</guid>
+        </item>
+    {%- endfor %}
+  </channel>
+</rss>

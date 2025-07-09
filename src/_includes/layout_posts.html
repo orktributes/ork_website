@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/posts.css">
+    <title>Recommendations of {{ title }}</title>
+</head>
+
+<body>
+    <!-- main content div start -->
+    <div class="main_container">
+        <!-- include the content from header.liquid in the _includes directory-->
+        {% include "header.liquid" %}
+        <!-- Performers_info_container div start -->
+        <div class="Performers_info_container">
+            <!-- for loop to make the performer info divs start -->
+            {%- for Performers in Performers %}
+                <!-- main Performers_info div start -->
+                <div class="Performers_info">
+                    <h1>{{Performers.name}}</h1>
+                        <img class="Performers_img" src="{{Performers.img}}" alt="Performers.img"><br>
+                    <!-- if the first tag is nonanimatedposts link to the social of the performer else link to the wiki-->
+                    {% if tags[0] == "nonanimatedposts"%}
+                        <a class="Performers_social" href="{{Performers.social}}">social</a>
+                    {% else %}
+                        <a class="Performers_social" href="{{Performers.social}}">wiki</a>
+                    {% endif %}
+                <!-- main Performers_info div end -->
+                </div>
+            <!-- for loop to make the performer info divs end -->
+            {%- endfor %}
+        <!-- Performers_info_container div end -->
+        </div>
+        <div class="content">
+            <p id="Director">Director: {{director}} Release Date:{{release_date}}</p>
+            {{ content }}
+        </div>
+
+        <!-- include the content from footer.liquid in the _includes directory-->
+        {% include "footer.liquid" %}
+    <!-- main content div end -->
+    </div>
+</body>
+
+</html>

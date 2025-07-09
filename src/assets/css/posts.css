@@ -1,0 +1,74 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+.main_container {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "performers_info content"
+        "footer footer";
+    grid-template-columns: 1fr 3fr;
+    gap: 5px;
+    background-color: black;
+    padding: 5px;
+}
+
+.main_container>div.header {
+    grid-area: header;
+    /* border: solid 2px white; */
+}
+
+.nav {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.nav:hover {
+    background-color: white;
+    color: black;
+}
+
+.main_container>div.content {
+    grid-area: content;
+    /* border: solid 2px white; */
+}
+
+#Director {
+    font-size: 20px;
+}
+
+.main_container>div.Performers_info_container {
+    grid-area: performers_info;
+    /* border: solid 2px white; */
+}
+
+.Performers_img {
+    height: 200px;
+}
+
+.Performers_social {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 90px;
+}
+
+.Performers_social:hover {
+    background-color: white;
+    color: black;
+}
+
+.main_container>div.footer {
+    grid-area: footer;
+    text-align: center;
+}

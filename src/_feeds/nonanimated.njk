@@ -26,7 +26,16 @@
         <item>
             <title>{{ post.data.title }}</title>
             <link>{{ absolutePostUrl }}</link>
-            <description>{{content}}</description>
+            <description>
+              {%- for items in post.data.Performers %}
+                <text>{{items.name}}&lt;br&gt;</text>
+                <Image>
+                  <![CDATA[<img src="{{metadata.url}}{{items.img}}" width="80" height="80">]]>
+                </Image>&lt;br&gt;
+                <link>{{items.social}}</link>&lt;br&gt;
+              {%- endfor %}
+              {{post.content}}
+            </description>
             <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
             <dc:creator>{{ metadata.author.name }}</dc:creator>
             <guid>{{ absolutePostUrl }}</guid>

@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include "metadata.liquid" %}
     <link rel="stylesheet" href="/assets/css/posts.css">
     <title>Recommendations of {{ title }}</title>
 </head>
@@ -36,6 +37,7 @@
         <div class="content">
             <p id="Director">Director: {{director}} Release Date:{{release_date}}</p>
             {{ content }}
+            <a class="nav" href="{{link}}">Link To The Scene</a>
         </div>
 
         <!-- include the content from footer.liquid in the _includes directory-->

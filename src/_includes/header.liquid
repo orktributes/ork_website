@@ -1,14 +1,19 @@
+<!-- start of the header -->
 <div class="header">
     <header>
-    <a class="nav" href="/">Home</a>
-    {% if title == "Home" %}
-    {% elsif title == "Non Animated" %}
-    {% elsif title == "Animated" %}
-    {% else %}
-        <a class="nav" href="{{link}}">Link To The Scene</a>
-    {% endif %}
-    <a class="nav" href="/posts/animated/">Animated</a>
-    <a class="nav" href="/posts/non_animated/">Non Animated</a>
+        <!-- a link to the home page -->
+        <a class="nav" href="/">Home</a>
+        <!-- if title is Home,Non Animated,Animated do nothing -->
+        {% if title == "Home" %}
+        {% elsif title == "Non Animated" %}
+        {% elsif title == "Animated" %}
+        {% else %}
+            <a class="nav" href="{{link}}">Link To The Scene</a>
+        {% endif %}
+        <!-- links to the page for Animated and Non Animated--> 
+        <a class="nav" href="/posts/animated/">Animated</a>
+        <a class="nav" href="/posts/non_animated/">Non Animated</a>
     <hr>
-</header>
+    </header>
+<!-- end of the header -->
 </div>

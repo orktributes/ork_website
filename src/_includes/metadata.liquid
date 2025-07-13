@@ -11,11 +11,32 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://orktributes.github.io/{{page.url}}">
 <meta property="og:title" content="{{ title }}">
-<meta property="og:description" content="recommendation of {{title}}">
+
+{% if title == "Home" %}
+    <meta property="og:description" content="orktributes website">
+{% elsif title == "Non Animated" %}
+    <meta property="og:description" content="orktributes recommendations of Non Animated">
+{% elsif title == "Animated" %}
+    <meta property="og:description" content="orktributes recommendations of Animated">
+{% else %}
+    <meta property="og:description" content="recommendation of {{title}}">
+{% endif %}
+
 <meta property="og:image" content="{{ site.url}}{{icon}}">
 
 <meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:domain" content="orktributes.github.io">
 <meta property="twitter:url" content="https://orktributes.github.io/{{page.url}}">
 <meta property="twitter:title" content="{{ title }}">
-<meta property="twitter:description" content="recommendation of {{title}}">
+
+{% if title == "Home" %}
+    <meta property="twitter:description" content="orktributes website">
+{% elsif title == "Non Animated" %}
+    <meta property="twitter:description" content="orktributes recommendations of Non Animated">
+{% elsif title == "Animated" %}
+    <meta property="twitter:description" content="orktributes recommendations of Animated">
+{% else %}
+    <meta property="twitter:description" content="recommendation of {{title}}">
+{% endif %}
+
 <meta property="twitter:image" content="{{ site.url}}{{icon}}">

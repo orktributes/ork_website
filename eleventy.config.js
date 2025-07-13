@@ -2,6 +2,7 @@ const { feedPlugin } = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/assets");
+  eleventyConfig.addPassthroughCopy("./src/robots.txt");
   eleventyConfig.addShortcode("localedate", function () {
     return new Date().toLocaleDateString()
   })
@@ -15,11 +16,11 @@ module.exports = function (eleventyConfig) {
     },
     metadata: {
       language: "en",
-      title: "porn",
-      subtitle: "This is a longer description about your blog.",
-      base: "http://localhost:8080/",
+      title: "orktributes website feed",
+      subtitle: "",
+      base: "https://orktributes.github.io/",
       author: {
-        name: "Your Nam",
+        name: "orktributes",
         email: "", // Optional
       }
     }

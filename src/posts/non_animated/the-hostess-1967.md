@@ -2,9 +2,12 @@
 title: The Hostess 1967
 tags: nonanimatedposts
 layout: layout_posts.html
+icon: /assets/posts/icons/the_hostess_1967.jpg
+description: recommendation of {{title}}
 
 link: https://vampired.com/the-hostess-1967/
 director: Roberto Di Suna
+release_date: April 16, 2025
 Performers:
     - name: Leana Lovings
       img: /assets/posts/performers/leana-lovings.jpg
@@ -12,7 +15,6 @@ Performers:
     - name: Tiffany Tatum
       img: /assets/posts/performers/tiffany-tatum.png
       social: https://x.com/real_tiffanyxx
-release_date: April 16, 2025
 ---
 ##  Likes:
 

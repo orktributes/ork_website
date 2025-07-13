@@ -3,7 +3,6 @@ title: The Hostess 1967
 tags: nonanimatedposts
 layout: layout_posts.html
 icon: /assets/posts/icons/the_hostess_1967.jpg
-description: recommendation of {{title}}
 
 link: https://vampired.com/the-hostess-1967/
 director: Roberto Di Suna

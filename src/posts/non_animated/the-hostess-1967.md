@@ -16,7 +16,7 @@ Performers:
       social: https://x.com/real_tiffanyxx
 ---
 ##  Likes:
-
+- the scene from 24:42 to 26:46
 
 ## Dislike:
-intro is a bit too long for me at a run time of 8:19
+- intro is a bit too long for me at a run time of 8:19

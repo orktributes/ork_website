@@ -1,6 +1,6 @@
 ---
 title: The Hostess 1967
-tags: nonanimatedposts
+tags: [nonanimatedposts, ",Lesbian," ,"Small Tits,","Teen (18-22),","Vampire"]
 layout: layout_posts.html
 icon: /assets/posts/icons/the_hostess_1967.jpg
 

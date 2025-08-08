@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include "metadata.liquid" %}
+    <link rel="stylesheet" href="/assets/css/posts_gallery.css">
+    <title>{{ title }}</title>
+</head>
+
+<body>
+    {% include "header.liquid" %}
+
+    <div class="gallery">
+        <ul>
+            {% if title == "Animated" %}
+                {% for post in collections.animatedposts %}
+                    <li>
+                        {{ post.data.title }}
+                        <a href="{{ post.url}}">
+                            <img src="{{post.data.icon}}" alt="">
+                        </a>
+                    </li>
+            {% endfor %}
+            {% else %}
+                {% for post in collections.nonanimatedposts %}
+                    <li>
+                        {{ post.data.title }}
+                        <a href="{{ post.url}}">
+                            <img src="{{post.data.icon}}" alt="">
+                        </a>
+                    </li>
+                {% endfor %}
+            {% endif %}
+        </ul>
+    </div>
+    {% comment %} {% include "footer.liquid" %} {% endcomment %}
+</body>
+
+</html>
